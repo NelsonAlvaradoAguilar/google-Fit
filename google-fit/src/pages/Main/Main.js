@@ -1,9 +1,11 @@
-function Welcome() {
+import Header from "../../components/Header/Header";
+
+function Main() {
   return (
     <section className="">
-      <p> Using AI Education for Google Fit Users</p>
+      <Header />
     </section>
   );
 }
 
-export default Welcome;
+export default Main;

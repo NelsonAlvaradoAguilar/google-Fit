@@ -1,0 +1,73 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.nav {
+  border-bottom: 1px dashed gray; //this is temporary for visibility of next component; this should be removed when finalizing the whole design
+  padding: 0rem 2.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  height: 6.9rem;
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 6rem;
+    height: 4rem;
+
+    &__pic {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    &__label {
+      margin-top: 0rem;
+      color: gray;
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+      width: 7rem;
+      display: flex;
+      justify-content: center;
+      &--google {
+        font-weight: 600;
+        margin-right: 0.2rem;
+      }
+      &--fit {
+        font-weight: 400;
+      }
+    }
+  }
+
+  .download-cta {
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    padding: 0 1rem;
+    padding-top: 0.5rem;
+    min-width: 4rem;
+    height: 2.375rem;
+    vertical-align: middle;
+    text-align: center;
+    background-color: $color-cta-download-light-blue;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+
+    &:hover {
+      background-color: $color-footer-primary-yellow;
+    }
+  }
+
+  .download-cta__link {
+    text-decoration: none;
+    color: $color-white;
+    font-weight: 400;
+
+    &:hover {
+      color: $color-black;
+    }
+  }
+}
