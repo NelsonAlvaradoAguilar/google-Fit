@@ -1,3 +1,4 @@
+import "./Main.scss";
 function Welcome() {
   return (
     <section className="">
