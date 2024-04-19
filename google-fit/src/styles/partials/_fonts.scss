@@ -1,4 +1,8 @@
-@use "./variables" as *;
+// @use "./variables" as *;
+
+$font-regular: "Poppins-Regular";
+$font-bold: "Poppins-Bold";
+$font-extrabold: "Poppins-ExtraBold";
 
 @font-face {
   font-family: "Poppins-Regular";
@@ -20,6 +24,6 @@
     format("truetype");
 }
 
-body {
-  font-family: "Poppins-Regular";
-}
+// body {
+//   font-family: "Poppins-Regular";
+// }
