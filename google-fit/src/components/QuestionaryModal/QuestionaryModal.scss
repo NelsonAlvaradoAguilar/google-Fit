@@ -1,9 +1,9 @@
 .modal {
   position: relative;
   display: flex;
-  flex-direction: column;
+  list-style: none;
   &__exit {
     background-color: aquamarine;
-    width: 24px;
+    // width: 24px;
   }
 }
