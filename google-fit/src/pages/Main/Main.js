@@ -1,13 +1,15 @@
 import TestimonialSection from "../../components/Testimonials/Testimonials";
 import AiRoll from "../../components/AiRoll/AiRoll";
-function Welcome() {
+import Header from "../../components/Header/Header";
+
+function Main() {
   return (
     <section className="">
-      <p> Using AI Education for Google Fit Users</p>
+      <Header />
       <TestimonialSection />
       <AiRoll />
     </section>
   );
 }
 
-export default Welcome;
+export default Main;

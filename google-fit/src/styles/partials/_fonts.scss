@@ -1,4 +1,6 @@
-@use "./variables" as *;
+$font-regular: "Poppins-Regular";
+$font-bold: "Poppins-Bold";
+$font-extrabold: "Poppins-ExtraBold";
 
 @font-face {
   font-family: "Poppins-Regular";
@@ -18,8 +20,4 @@
   font-weight: 700;
   src: url("../../assets/fonts/Poppins/Poppins/Poppins-ExtraBold.ttf")
     format("truetype");
-}
-
-body {
-  font-family: "Poppins-Regular";
 }
