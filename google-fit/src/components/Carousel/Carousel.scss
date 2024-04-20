@@ -49,7 +49,7 @@
     }
   }
   &__buttons {
-    // background-image: url("../../assets/icons/Sort\ Down.png");
+    background-image: url("../../assets/icons/Sort\ Down.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -58,10 +58,9 @@
     border-style: none;
     background-color: $color-white;
     transform: rotate(180deg);
+    opacity: 0;
     @include tablet {
       transform: rotate(90deg);
-      opacity: 0.4;
-
       height: 36px;
       width: 36px;
     }
@@ -74,5 +73,8 @@
         transform: rotate(270deg);
       }
     }
+  }
+  &__buttons:hover {
+    opacity: 1;
   }
 }
