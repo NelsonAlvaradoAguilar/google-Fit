@@ -10,11 +10,7 @@ const Benefits = () => {
   return (
     <main className="main-container">
       <div className="benefits">
-        <BenefitsSlide
-          className="benefits__slideshow"
-          benefitsData={benefitsData}
-        />
-
+        <BenefitsSlide benefitsData={benefitsData} />
         <img
           className="benefits__description"
           src={benefitsDesc}

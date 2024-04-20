@@ -2,34 +2,32 @@
 @use "../../styles/partials/mixins" as *;
 
 .main-container {
-  background-color: yellow;
   position: relative;
-  padding: 2rem 2rem;
-}
-.benefits {
-  border: 1px solid red;
-  //   padding: 0rem 3rem;
-  @include desktop {
-    display: flex;
-    flex-direction: row;
-  }
-}
+  padding: 3rem 3rem 2rem 3rem;
 
-.benefits__slideshow {
-  border: 1px solid green;
-}
+  .benefits {
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+    }
+    &__description {
+      width: 90vw;
+      @include tablet {
+        width: 30rem;
+        margin-left: 3rem;
+      }
+      @include desktop {
+        width: 26rem;
+        margin-left: 3rem;
+      }
+    }
 
-.benefits__description {
-  border: 1px solid violet;
-  @include desktop {
-    width: 25rem;
-  }
-}
-
-.benefits__decor {
-  border: 1px solid orange;
-  @include desktop {
-    position: absolute;
-    top: 5%;
+    &__decor {
+      display: hidden;
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      width: 12vw;
+    }
   }
 }

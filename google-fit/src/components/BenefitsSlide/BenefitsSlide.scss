@@ -2,7 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .slide {
-  width: 90vw;
+  width: 80vw;
 
   @include tablet {
     width: 42.5rem;

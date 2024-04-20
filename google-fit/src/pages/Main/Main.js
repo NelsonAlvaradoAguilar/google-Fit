@@ -4,9 +4,10 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Benefits from "../../components/Benefits/Benefits";
 
+import "./Main.scss";
 function Main() {
   return (
-    <section className="">
+    <section className="main">
       <Header />
       <TestimonialSection />
       <AiRoll />
