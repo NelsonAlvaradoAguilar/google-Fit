@@ -17,3 +17,24 @@
     @content;
   }
 }
+
+@mixin cards {
+  box-shadow: 0px 2px 5px 0px rgba(19, 24, 44, 0.1);
+  // border: 1px solid $secBgr;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+}
+@mixin marginLR {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@mixin footer-section-LS {
+  display: flex;
+  flex-direction: row;
+  height: 12rem;
+  padding-bottom: 0rem;
+  padding-top: 4rem;
+  text-align: left;
+}

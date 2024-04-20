@@ -1,0 +1,22 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+.testimonies {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem 2rem 1rem 2rem;
+  justify-content: space-between;
+  @include tablet {
+    flex-direction: row;
+  }
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    @include sectionHeader();
+  }
+  &__content {
+    @include bodyText();
+  }
+}
