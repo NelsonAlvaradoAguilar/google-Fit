@@ -1,0 +1,37 @@
+@use "../../styles/partials/mixins" as *;
+
+.carousel {
+  width: 65%;
+  display: flex;
+  // flex-direction: row;
+  &__text {
+    //position: absolute;
+    // top: 20rem;
+    display: inline-block;
+    // width: 11rem;
+  }
+  &__list {
+    //width: 100%;
+    list-style: none;
+    display: flex;
+  }
+  &__slide {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    padding: 0%;
+    scrollbar-width: none;
+  }
+  &__img {
+    @include cards();
+    @include marginLR();
+  }
+  &__card {
+    display: flex;
+
+    flex-direction: column;
+    width: fit-content;
+
+    @include cards();
+  }
+}
