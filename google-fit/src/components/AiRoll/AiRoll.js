@@ -1,4 +1,4 @@
-import { questions } from "../../apiTools/api";
+import { questions } from "../../data/api";
 import { useState } from "react";
 import QuestionaryModal from "../QuestionaryModal/QuestionaryModal";
 import "./AiRoll.scss";

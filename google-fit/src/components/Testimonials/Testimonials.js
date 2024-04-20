@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { getTestimonies } from "../../apiTools/api";
+import { getTestimonies } from "../../data/api";
 //import Carousel from "react-multi-carousel";
 
 import Carousel from "../Carousel/Carousel";
 import CrElements from "../CrElements/CrElements";
-import { imageData } from "../../apiTools/api";
+import { imageData } from "../../data/api";
 
 import "./Testimonials.scss";
 const TestimonialSection = () => {
