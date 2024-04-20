@@ -1,3 +1,28 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+
 .hero {
   display: flex;
+  flex-direction: column;
+  &-img-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  &-text {
+    z-index: 300p;
+    font-size: 2.5rem;
+    font-family: $font-bold;
+  }
+  & img {
+    width: 39%;
+    height: 35rem;
+    object-fit: cover;
+  }
+  &-image {
+    &__left {
+      object-position: -15% 0;
+    }
+  }
 }
