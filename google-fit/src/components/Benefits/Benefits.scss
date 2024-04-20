@@ -1,0 +1,35 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.main-container {
+  background-color: yellow;
+  position: relative;
+  padding: 2rem 2rem;
+}
+.benefits {
+  border: 1px solid red;
+  //   padding: 0rem 3rem;
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.benefits__slideshow {
+  border: 1px solid green;
+}
+
+.benefits__description {
+  border: 1px solid violet;
+  @include desktop {
+    width: 25rem;
+  }
+}
+
+.benefits__decor {
+  border: 1px solid orange;
+  @include desktop {
+    position: absolute;
+    top: 5%;
+  }
+}

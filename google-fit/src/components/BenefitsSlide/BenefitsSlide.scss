@@ -1,0 +1,13 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.slide {
+  width: 90vw;
+
+  @include tablet {
+    width: 42.5rem;
+  }
+  @include desktop {
+    width: 42.5rem;
+  }
+}

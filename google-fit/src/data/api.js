@@ -3,6 +3,10 @@ import image2 from "../assets/testimonials/Front view of an emotional  woman in 
 import image3 from "../assets/testimonials/Calm and confident.svg";
 import image4 from "../assets/testimonials/Teenage girl on a skateboard showing middle fingers.svg";
 import image5 from "../assets/testimonials/Young man in sports clothes posing.svg";
+import runningMan from "../assets/images/benefits/running-man.svg";
+import restingWoman from "../assets/images/benefits/resting-woman.svg";
+import sleepingMan from "../assets/images/benefits/sleeping-man.svg";
+
 const questions = [
   {
     id: 1,
@@ -55,4 +59,6 @@ const imageData = [
   },
 ];
 
-export { questions, imageData };
+const benefitsData = [runningMan, restingWoman, sleepingMan];
+
+export { questions, imageData, benefitsData };

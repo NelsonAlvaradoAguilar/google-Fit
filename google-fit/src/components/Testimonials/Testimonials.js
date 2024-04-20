@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getTestimonies } from "../../data/api";
+// import { getTestimonies } from "../../data/api";
 //import Carousel from "react-multi-carousel";
 
 import Carousel from "../Carousel/Carousel";
