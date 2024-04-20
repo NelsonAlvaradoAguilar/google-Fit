@@ -1,4 +1,4 @@
-import googleFitLogo from "../../assets/logos/google-fit-icon.svg";
+import logo from "../../assets/logos/google-header-logo.svg";
 import "../Header/Header.scss";
 import { Link } from "react-router-dom";
 
@@ -10,17 +10,10 @@ function Header() {
           to="https://play.google.com/store/apps/details?id=com.google.android.apps.fitness&hl=en_CA&gl=US"
           target="_blank"
         >
-          <img
-            className="logo__pic"
-            src={googleFitLogo}
-            alt="Google Fit Logo"
-          ></img>
+          <img src={logo} alt="Google Fit Logo"></img>
         </Link>
-        <p className="logo__label">
-          <span className="logo__label--google">Google</span>
-          <span className="logo__label--fit">Fit</span>
-        </p>
       </div>
+
       <div className="download-cta">
         <Link
           className="download-cta__link"
