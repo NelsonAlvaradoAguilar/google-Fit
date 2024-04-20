@@ -1,0 +1,9 @@
+.modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &__exit {
+    background-color: aquamarine;
+    width: 24px;
+  }
+}
