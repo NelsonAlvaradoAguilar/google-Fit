@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Carousel.scss";
 
 const Carousel = ({ data }) => {
@@ -7,55 +7,63 @@ const Carousel = ({ data }) => {
   const numItems = data.length;
 
   // Duplicate the images to create a circular carousel
-  const carouselData = [...data, ...data, ...data];
+  const carouselData = [...data, ...data];
 
-  const scrollToIndex = () => {
+  const scrollToIndex = (index) => {
     if (carouselRef.current) {
+      const containerWidth = carouselRef.current.offsetWidth;
+      const itemWidth = containerWidth / 3; // Assuming three images are visible at a time
+      const maxScrollLeft = carouselRef.current.scrollWidth - containerWidth;
+      const scrollLeft = Math.min(index * itemWidth, maxScrollLeft);
       carouselRef.current.scrollTo({
-        left: "left",
+        left: scrollLeft,
         behavior: "smooth",
       });
     }
   };
 
   const handleNextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % numItems);
-    scrollToIndex(currentIndex + 1);
+    const nextIndex = (currentIndex + 1) % numItems; // Calculate next index based on the updated state
+    setCurrentIndex(nextIndex);
+    scrollToIndex(nextIndex);
   };
 
   const handlePrevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? numItems - 1 : prevIndex - 1
-    );
-    scrollToIndex(currentIndex === 0 ? numItems - 1 : currentIndex - 1);
+    const prevIndex = currentIndex === 0 ? numItems - 1 : currentIndex - 1; // Calculate previous index
+    setCurrentIndex(prevIndex);
+    scrollToIndex(prevIndex);
   };
 
   return (
     <div className="carousel" ref={carouselRef}>
-      <button onClick={handlePrevSlide}>Prev</button>
       <ul className="carousel__slide">
+        <button
+          className="carousel__buttons"
+          onClick={handlePrevSlide}
+        ></button>
         {carouselData.map((image, index) => (
-          <li key={index} className="carousel__list">
-            <div className="carousel__card">
-              <img
-                className="carousel__img"
-                src={image.image}
-                alt={image.alt}
-                style={{
-                  display:
-                    index >= currentIndex && index < currentIndex + 3
-                      ? "block"
-                      : "none",
-                }}
-              />
-              <p className="carousel__text">{image.text}</p>
-            </div>
+          <li
+            key={index}
+            className={`carousel__card ${
+              index >= currentIndex && index < currentIndex + 3 ? "visible" : ""
+            }`}
+          >
+            <img
+              className="carousel__card--img"
+              src={image.image}
+              alt={image.alt}
+              text={image.text}
+            />
           </li>
         ))}
+        <button
+          className={"carousel__buttons carousel__buttons--down"}
+          onClick={handleNextSlide}
+        ></button>
       </ul>
-      <button onClick={handleNextSlide}>Next</button>
     </div>
   );
 };
 
 export default Carousel;
+//

@@ -1,36 +1,22 @@
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
 .testimonies {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  margin: 1rem 2rem 1rem 2rem;
+  justify-content: space-between;
+  @include tablet {
+    flex-direction: row;
+  }
   &__text-container {
-    width: 22rem;
-    margin-left: 3rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
     display: flex;
     flex-direction: column;
   }
-  &__carousel {
-    display: flex;
+  &__title {
+    @include sectionHeader();
   }
-  &__list {
-    display: flex;
-    flex-direction: row;
-    width: 800px;
-    list-style: none;
-  }
-  &__card {
-    display: flex;
-    width: fit-content; // width: 233px;
-    @include cards;
-    margin: 1rem;
-  }
-
-  &__image-text {
-    position: relative;
-    // right: 13rem;
-    width: 200px;
-    bottom: 12rem;
-    left: 1.5rem;
+  &__content {
+    @include bodyText();
   }
 }
