@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import Carousel from "../Carousel/Carousel";
 import CrElements from "../CrElements/CrElements";
 import { imageData } from "../../data/api";
