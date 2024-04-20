@@ -1,8 +1,8 @@
-import image1 from "../assets/testimonials/Smiling old woman holding hand weights in one hand.svg";
-import image2 from "../assets/testimonials/Front view of an emotional  woman in casual clothes standing with hands on hips.svg";
-import image3 from "../assets/testimonials/Calm and confident.svg";
-import image4 from "../assets/testimonials/Teenage girl on a skateboard showing middle fingers.svg";
-import image5 from "../assets/testimonials/Young man in sports clothes posing.svg";
+import image1 from "../assets/testimonials/Pic1.svg";
+import image2 from "../assets/testimonials/Pic2.svg";
+import image3 from "../assets/testimonials/Pic3.svg";
+import image4 from "../assets/testimonials/Pic4.svg";
+import image5 from "../assets/testimonials/Pic5.svg";
 const questions = [
   {
     id: 1,

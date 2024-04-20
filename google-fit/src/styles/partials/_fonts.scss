@@ -21,3 +21,11 @@ $font-extrabold: "Poppins-ExtraBold";
   src: url("../../assets/fonts/Poppins/Poppins/Poppins-ExtraBold.ttf")
     format("truetype");
 }
+//mobile
+@mixin sectionHeader {
+  font-family: Poppins-Bold;
+}
+
+@mixin bodyText {
+  font-family: Poppins-Regular;
+}
