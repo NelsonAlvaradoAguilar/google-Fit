@@ -26,11 +26,10 @@
     }
     &__middle {
       @extend .hero-text;
-
       text-align: center;
-      left: 38%;
-      width: 14rem;
-      top: 26rem;
+      left: 36%;
+      width: 15rem;
+      top: 22rem;
 
       @include desktop {
         left: 38%;
@@ -55,10 +54,20 @@
     width: 39%;
     height: 35rem;
     object-fit: cover;
+    overflow: hidden;
   }
   &-image {
     &__left {
-      object-position: -15% 0;
+      object-position: 17% 0;
+    }
+
+    &__middle {
+      @include tablet;
+      object-position: 95% 76%;
+
+      @include desktop {
+        object-position: 2% 76%;
+      }
     }
   }
 }

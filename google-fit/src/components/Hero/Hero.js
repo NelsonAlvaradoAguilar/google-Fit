@@ -1,6 +1,6 @@
 import "./Hero.scss";
 import heroImageLeft from "../../assets/images/Hero-left-enlarged.png";
-import heroImageMiddle from "../../assets/images/hero-middle-enlarged.png";
+import heroImageMiddle from "../../assets/images/hero-middle.png";
 import heroImageRight from "../../assets/images/hero-right-enlarged.png";
 
 function Hero() {
