@@ -15,7 +15,7 @@ function Main() {
       <TestimonialSection />
       <Benefits />
       <AiRoll />
-
+      <StartTheJourney />
       <Footer />
     </section>
   );

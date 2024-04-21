@@ -1,11 +1,11 @@
 import "./StartTheJourney.scss";
-import phoneImg from "../../assets/startTheJourney/iPhone 15 Pro Portrait Mockup 1.svg";
-console.log(phoneImg);
-
+import bubbles2 from "../../assets/bubbles/Group 6.svg";
 const StartTheJourney = () => {
-  <div className="element">
-    <img className="element"></img>
-    <p>fdljnbrkg</p>
-  </div>;
+  return (
+    <section className="hero-journey">
+      <h1 className="hero-journey__title">Start the journey </h1>
+      <img className="hero-journey__bubbles" src={bubbles2}></img>
+    </section>
+  );
 };
 export default StartTheJourney;
