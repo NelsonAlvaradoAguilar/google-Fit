@@ -1,0 +1,61 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+.hero-journey {
+  background-image: url("../../assets/startTheJourney/iPhone 15 Pro Portrait Mockup.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 20rem;
+
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @include tablet {
+    margin: 6rem 4.5rem 6rem 4.5rem;
+    background-position: center;
+  }
+  @include desktop {
+    margin-left: 8.5rem;
+    margin-right: 8.5rem;
+    flex-direction: row;
+    height: 30rem;
+  }
+  &__title {
+    position: relative;
+    width: 10rem;
+    left: 10rem;
+    display: inline;
+    @include sectionHeader();
+    font-size: 1rem;
+    bottom: 2rem;
+    @include tablet {
+      left: 25rem;
+      @include bodyText();
+      font-weight: 100;
+    }
+    @include desktop {
+      left: 20rem;
+      top: 5rem;
+      font-weight: 400;
+      font-size: 1.5rem;
+      width: 20rem;
+    }
+  }
+  &__bubbles {
+    float: right;
+    position: absolute;
+    width: 3rem;
+
+    left: 21.5rem;
+    @include tablet {
+      left: 43rem;
+      width: 7rem;
+    }
+    @include desktop {
+      left: 71.5rem;
+      width: 10rem;
+      transform: rotate(30deg);
+    }
+  }
+}
