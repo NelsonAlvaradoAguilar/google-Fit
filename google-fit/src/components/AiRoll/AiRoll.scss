@@ -1,37 +1,107 @@
 @use "../../styles/partials/mixins" as *;
-
+@use "../../styles/partials/variables" as *;
 .Airoll {
   display: flex;
   flex-direction: column;
+
   @include desktop {
     margin-left: 2rem;
     margin-right: 2rem;
   }
+  @include tablet {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
   @include marginLR();
+
+  &__bubbles {
+    width: 5rem;
+    float: left;
+    position: absolute;
+    left: -3rem;
+    @include tablet {
+      width: 10rem;
+
+      left: -5rem;
+    }
+  }
+
   &__questionary {
     padding-left: 0%;
+    list-style: none;
   }
   &__list-of-question {
     list-style: none;
     padding: 0%;
+    @include tablet {
+      border-top: 1px solid $color-gray;
+      margin-bottom: 1rem;
+    }
+    &--border-top {
+      @include tablet {
+        border-top: none;
+      }
+    }
+    &--zero {
+      @include tablet {
+        border-top: none;
+      }
+    }
   }
 
   &__questions-container {
     display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      // width: 10rem;
+    }
+
+    @include tablet {
+      //width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__question-arrow {
+    display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    @include tablet {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &--width {
+      @include tablet {
+        width: 19rem;
+      }
+    }
   }
   &__question {
     width: calc(0.95 * 100%);
+    &--position {
+      @include tablet {
+        margin-bottom: auto;
+        margin-top: 0%;
+      }
+    }
   }
   &__arrow {
     background-image: url("../../assets/icons/Sort\ Down.png");
     width: 2rem;
     height: 2rem;
     background-repeat: no-repeat;
+
     &--down {
       transform: rotate(180deg);
+      @include tablet {
+        visibility: hidden;
+        width: 0%;
+      }
     }
   }
 }

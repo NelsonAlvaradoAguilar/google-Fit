@@ -4,7 +4,8 @@ import Header from "../../components/Header/Header";
 import Hero from "../../components/Hero/Hero";
 import Footer from "../../components/Footer/Footer";
 import Benefits from "../../components/Benefits/Benefits";
-
+import StartTheJourney from "../../components/StartTheJourney/StartTheJourney";
+import Jorney from "../../components/Jorney/Jorney";
 import "./Main.scss";
 function Main() {
   return (
@@ -12,8 +13,9 @@ function Main() {
       <Header />
       <Hero />
       <TestimonialSection />
-      <AiRoll />
       <Benefits />
+      <AiRoll />
+
       <Footer />
     </section>
   );
