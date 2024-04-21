@@ -59,6 +59,12 @@
   &-image {
     &__left {
       object-position: 17% 0;
+      transition: width 0.3s ease;
+
+      &--expanded {
+        width: 300% !important;
+        transition: width 0.3s ease;
+      }
     }
 
     &__middle {
