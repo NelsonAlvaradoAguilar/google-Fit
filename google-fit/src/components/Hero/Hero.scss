@@ -13,10 +13,43 @@
   &-text {
     font-size: 1.3rem;
     font-family: "Poppins-Bold";
-    width: 1rem;
     position: absolute;
-    top: 8rem;
-    left: 1rem;
+    @include desktop {
+      font-size: 2rem;
+    }
+
+    &__left {
+      @extend .hero-text;
+      top: 8rem;
+      left: 1rem;
+      width: 1rem;
+    }
+    &__middle {
+      @extend .hero-text;
+
+      text-align: center;
+      left: 38%;
+      width: 14rem;
+      top: 26rem;
+
+      @include desktop {
+        left: 38%;
+        width: 21rem;
+        top: 17rem;
+      }
+    }
+    &__right {
+      @extend .hero-text;
+      color: white;
+      width: 14rem;
+      left: 70%;
+      top: 32rem;
+      text-align: right;
+      @include desktop {
+        left: 81%;
+        top: 27rem;
+      }
+    }
   }
   & img {
     width: 39%;

@@ -6,7 +6,15 @@ import heroImageRight from "../../assets/images/hero-right-enlarged.png";
 function Hero() {
   return (
     <div className="hero">
-      <p className="hero-text">Personalized fitness recommendations await!</p>
+      <p className="hero-text__left">
+        Personalized fitness recommendations await!
+      </p>
+      <p className="hero-text__middle">
+        Fitness companion that offers stress management{" "}
+      </p>
+      <p className="hero-text__right">
+        Get personalized nutrition tips instantly
+      </p>
       <div className="hero-img-container">
         <img
           className="hero-image__left"
