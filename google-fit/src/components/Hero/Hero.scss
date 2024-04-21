@@ -26,6 +26,16 @@
       &--hide {
         display: none;
       }
+      &--expanded {
+        @extend.hero-text;
+        width: 31rem;
+        left: 11%;
+        top: 15%;
+        @include desktop {
+          width: 51rem;
+          top: 10%;
+        }
+      }
     }
     &__middle {
       @extend .hero-text;
@@ -35,6 +45,20 @@
       top: 22rem;
       &--hide {
         display: none;
+      }
+      &--expanded {
+        @extend.hero-text;
+        color: white;
+        width: 32rem;
+        text-align: center;
+        top: 47%;
+        left: 19%;
+
+        @include desktop {
+          width: 49rem;
+          top: 42%;
+          left: 22%;
+        }
       }
 
       @include desktop {
@@ -56,6 +80,15 @@
       @include desktop {
         left: 81%;
         top: 27rem;
+      }
+
+      &--expanded {
+        @extend.hero-text;
+        color: white;
+        left: 79%;
+        top: 28%;
+        width: 11rem;
+        text-align: right;
       }
     }
   }

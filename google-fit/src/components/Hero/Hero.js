@@ -7,15 +7,23 @@ import heroImageRight from "../../assets/images/hero-right-enlarged.png";
 function Hero() {
   const [enlargedImage, setEnlargedImage] = useState(null);
   const [expandedText, setExpandedText] = useState({
-    left: "Left Text",
-    middle: "middle Text",
-    right: "right Text",
+    left: false,
+    middle: false,
+    right: false,
   });
+
   const handleClick = (image) => {
     if (enlargedImage === image) {
       setEnlargedImage(null);
+      setExpandedText((prevState) => ({ ...prevState, [image]: false }));
     } else {
+      setExpandedText({
+        left: image === "left",
+        middle: image === "middle",
+        right: image === "right",
+      });
       setEnlargedImage(image);
+      setExpandedText((prevState) => ({ ...prevState, [image]: true }));
     }
   };
   return (
@@ -29,6 +37,26 @@ function Hero() {
       <p className={`hero-text__right${enlargedImage ? "--hide" : ""}`}>
         Get personalized nutrition tips instantly
       </p>
+
+      {/* Text that is only rendered when the respective image is clicked */}
+      {expandedText.left && (
+        <p className="hero-text__left--expanded">
+          Get personalized fitness recommendations based on your activity,
+          goals, and preferences with our new AI feature!
+        </p>
+      )}
+      {expandedText.middle && (
+        <p className="hero-text__middle--expanded">
+          The fitness companion offers personalized stress management through
+          data analysis
+        </p>
+      )}
+      {expandedText.right && (
+        <p className="hero-text__right--expanded">
+          Tailored nutrition advice just for you!
+        </p>
+      )}
+
       <div className="hero-img-container">
         <img
           className={`hero-image__left${
