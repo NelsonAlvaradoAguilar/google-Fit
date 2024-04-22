@@ -13,19 +13,119 @@
   &-text {
     font-size: 1.3rem;
     font-family: "Poppins-Bold";
-    width: 1rem;
     position: absolute;
-    top: 8rem;
-    left: 1rem;
+    @include desktop {
+      font-size: 2rem;
+    }
+
+    &__left {
+      @extend .hero-text;
+      top: 8rem;
+      left: 1rem;
+      width: 1rem;
+      &--hide {
+        display: none;
+      }
+      &--expanded {
+        @extend.hero-text;
+        width: 31rem;
+        left: 11%;
+        top: 15%;
+        @include desktop {
+          width: 51rem;
+          top: 10%;
+        }
+      }
+    }
+    &__middle {
+      @extend .hero-text;
+      text-align: center;
+      left: 36%;
+      width: 15rem;
+      top: 22rem;
+      &--hide {
+        display: none;
+      }
+      &--expanded {
+        @extend.hero-text;
+        color: white;
+        width: 32rem;
+        text-align: center;
+        top: 47%;
+        left: 19%;
+
+        @include desktop {
+          width: 49rem;
+          top: 42%;
+          left: 22%;
+        }
+      }
+
+      @include desktop {
+        left: 38%;
+        width: 21rem;
+        top: 17rem;
+      }
+    }
+    &__right {
+      @extend .hero-text;
+      color: white;
+      width: 14rem;
+      left: 68%;
+      top: 32rem;
+      text-align: right;
+      &--hide {
+        display: none;
+      }
+      @include desktop {
+        left: 81%;
+        top: 27rem;
+      }
+
+      &--expanded {
+        @extend.hero-text;
+        color: white;
+        left: 76%;
+        top: 28%;
+        width: 11rem;
+        text-align: right;
+      }
+    }
   }
   & img {
     width: 39%;
     height: 35rem;
     object-fit: cover;
+    overflow: hidden;
+    transition: width 0.3s ease;
   }
   &-image {
     &__left {
-      object-position: -15% 0;
+      object-position: 17% 0;
+
+      &--expanded {
+        width: 300% !important;
+      }
+    }
+
+    &__middle {
+      &--expanded {
+        width: 200% !important;
+        transition: width 0.3s ease;
+        object-position: 0% 79%;
+      }
+      @include tablet;
+      object-position: 95% 76%;
+
+      @include desktop {
+        object-position: 2% 76%;
+      }
+    }
+
+    &__right {
+      &--expanded {
+        width: 300% !important;
+      }
     }
   }
 }
