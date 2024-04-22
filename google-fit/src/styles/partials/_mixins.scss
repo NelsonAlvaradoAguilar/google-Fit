@@ -1,0 +1,40 @@
+@use "./variables" as *;
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin cards {
+  box-shadow: 0px 2px 5px 0px rgba(19, 24, 44, 0.1);
+  // border: 1px solid $secBgr;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+}
+@mixin marginLR {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+@mixin footer-section-LS {
+  display: flex;
+  flex-direction: row;
+  height: 12rem;
+  padding-bottom: 0rem;
+  padding-top: 4rem;
+  text-align: left;
+}

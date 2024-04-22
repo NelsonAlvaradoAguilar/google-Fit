@@ -1,0 +1,33 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.main-container {
+  position: relative;
+  padding: 3rem 3rem 2rem 3rem;
+
+  .benefits {
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+    }
+    &__description {
+      width: 80vw;
+      @include tablet {
+        width: 30rem;
+        margin-left: 3rem;
+      }
+      @include desktop {
+        width: 26rem;
+        margin-left: 3rem;
+      }
+    }
+
+    &__decor {
+      display: hidden;
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      width: 12vw;
+    }
+  }
+}

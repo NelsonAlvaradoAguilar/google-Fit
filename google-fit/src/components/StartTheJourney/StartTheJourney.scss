@@ -1,0 +1,65 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+.journey {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 2rem;
+  // height: 100vh;
+  flex-direction: row;
+  position: relative;
+  @include tablet {
+    margin-bottom: 5rem;
+  }
+  @include desktop {
+    flex-direction: row;
+    height: 30rem;
+    margin-bottom: 10rem;
+  }
+  &__phone {
+    height: 30rem;
+    order: 1;
+  }
+  &__phone-container {
+    width: fit-content;
+  }
+  &__title {
+    //  @include sectionHeader();
+    font-size: 2rem;
+    font-weight: 400;
+    @include tablet {
+      position: relative;
+      left: 15rem;
+      top: 16rem;
+      @include bodyText();
+      font-weight: 100;
+    }
+    @include desktop {
+      top: 18rem;
+      left: 15rem;
+
+      font-weight: 400;
+      font-size: 1.5rem;
+    }
+  }
+  &__bubbles {
+    width: 5rem;
+    height: fit-content;
+
+    order: 2;
+    position: absolute;
+    float: right;
+    left: 18.2rem;
+    @include tablet {
+      left: 40rem;
+      width: 7rem;
+      top: 15rem;
+    }
+    @include desktop {
+      left: 68.8rem;
+      top: 18rem;
+      width: 10rem;
+      // transform: rotate(30deg);
+    }
+  }
+}
