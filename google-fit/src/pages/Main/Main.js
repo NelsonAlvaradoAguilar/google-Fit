@@ -6,6 +6,7 @@ import Footer from "../../components/Footer/Footer";
 import Benefits from "../../components/Benefits/Benefits";
 import StartTheJourney from "../../components/StartTheJourney/StartTheJourney";
 import Jorney from "../../components/Jorney/Jorney";
+import CallToAction from "../../components/CallToAction/CallToAction";
 import "./Main.scss";
 function Main() {
   return (
@@ -16,6 +17,7 @@ function Main() {
       <Benefits />
       <AiRoll />
       <StartTheJourney />
+      <CallToAction />
       <Footer />
     </section>
   );

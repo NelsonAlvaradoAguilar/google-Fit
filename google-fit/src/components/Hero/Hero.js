@@ -71,7 +71,7 @@ function Hero() {
             enlargedImage === "middle" ? "--expanded" : ""
           }`}
           src={heroImageMiddle}
-          alt="Three girls running on a beach"
+          alt="Girl doing yoga pose"
           onClick={() => handleClick("middle")}
         ></img>
         <img
@@ -79,7 +79,7 @@ function Hero() {
             enlargedImage === "right" ? "--expanded" : ""
           }`}
           src={heroImageRight}
-          alt="Three girls running on a beach"
+          alt="Man looking in mirror in a gym with a lot of weights"
           onClick={() => handleClick("right")}
         ></img>
       </div>
