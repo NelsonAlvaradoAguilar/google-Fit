@@ -2,7 +2,6 @@ import { questions } from "../../data/api";
 import { useState } from "react";
 import QuestionaryModal from "../QuestionaryModal/QuestionaryModal";
 import bubbles from "../../assets/bubbles/Group 1.svg";
-import StartTheJourney from "../StartTheJourney/StartTheJourney";
 import "./AiRoll.scss";
 const AiRoll = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -13,14 +12,12 @@ const AiRoll = () => {
     setModalIsOpen(true);
     setQuestionId(id);
     setAnswer(answer);
-    console.log(answer);
-    console.log(questionId);
   };
   const handleCloseModal = () => {
     setModalIsOpen(false);
     setQuestionId(null);
   };
-  console.log(questions);
+
   return (
     <section className="Airoll">
       <div className="Airoll__content">

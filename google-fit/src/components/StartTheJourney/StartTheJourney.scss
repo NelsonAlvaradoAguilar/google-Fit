@@ -43,7 +43,6 @@
       left: 15rem;
       width: 14rem;
       font-size: 1.5rem;
-      // height: 6rem;
     }
     @include desktop {
       left: 20rem;
@@ -52,11 +51,10 @@
     }
   }
   &__bubbles {
-    // width: 5rem;
     order: 2;
     float: right;
     position: relative;
-    // left: 18.2rem;
+
     @include tablet {
       top: 16rem;
       width: 7rem;
