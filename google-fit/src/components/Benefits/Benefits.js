@@ -6,7 +6,6 @@ import benefitsDesc from "../../assets/images/benefits/benefits-description.svg"
 import { benefitsData } from "../../data/api";
 
 const Benefits = () => {
-  console.log(benefitsData);
   return (
     <main className="main-container">
       <div className="benefits">

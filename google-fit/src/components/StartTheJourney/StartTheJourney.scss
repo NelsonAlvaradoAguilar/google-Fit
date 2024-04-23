@@ -2,10 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 .journey {
   display: flex;
-  // justify-content: center;
-  // position: relative;
   margin-bottom: 2rem;
-  // height: 100vh;
   flex-direction: column;
 
   @include tablet {
@@ -22,9 +19,12 @@
     order: 1;
     @include tablet {
       height: 30rem;
+      position: relative;
+      left: 3rem;
     }
     @include desktop {
-      height: 35rem;
+      height: 37rem;
+      left: 5rem;
     }
   }
   &__content {
@@ -40,12 +40,12 @@
     top: 15rem;
     width: 15rem;
     @include tablet {
-      left: 15rem;
+      left: 18rem;
       width: 14rem;
       font-size: 1.5rem;
     }
     @include desktop {
-      left: 20rem;
+      left: 25rem;
       font-size: 2.4rem;
       width: 20rem;
     }
@@ -56,7 +56,7 @@
     position: relative;
 
     @include tablet {
-      top: 16rem;
+      top: 18rem;
       width: 7rem;
     }
     @include desktop {
