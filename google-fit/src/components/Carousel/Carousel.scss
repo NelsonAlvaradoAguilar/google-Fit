@@ -12,11 +12,9 @@
   &__card {
     list-style: none;
     display: none;
-    //width: 10rem;
 
     &--img {
       display: flex;
-      //height: 100%;
       padding-top: 1rem;
       width: 100%;
 
@@ -30,9 +28,9 @@
   }
   .visible {
     display: block;
+    transition: 2s;
   }
   &__slide {
-    // height: 28.5rem;
     align-items: center;
     display: flex;
     flex-direction: column;
