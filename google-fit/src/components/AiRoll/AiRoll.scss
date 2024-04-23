@@ -97,7 +97,7 @@
     width: 2rem;
     height: 2rem;
     background-repeat: no-repeat;
-
+    cursor: pointer;
     &--down {
       transform: rotate(180deg);
       @include tablet {
