@@ -59,11 +59,9 @@
     flex-direction: column;
 
     @include tablet {
-      // width: 10rem;
     }
 
     @include tablet {
-      //width: 100%;
       flex-direction: row;
       justify-content: space-between;
     }

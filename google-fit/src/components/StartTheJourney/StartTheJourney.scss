@@ -2,64 +2,66 @@
 @use "../../styles/partials/mixins" as *;
 .journey {
   display: flex;
-  justify-content: center;
-
+  // justify-content: center;
+  // position: relative;
   margin-bottom: 2rem;
   // height: 100vh;
-  flex-direction: row;
-  position: relative;
+  flex-direction: column;
+
   @include tablet {
     margin-bottom: 5rem;
   }
   @include desktop {
-    flex-direction: row;
-    height: 30rem;
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
+  }
+  &__container {
+    width: 100%;
   }
   &__phone {
-    height: 30rem;
+    height: 20rem;
     order: 1;
-  }
-  &__phone-container {
-    width: fit-content;
-  }
-  &__title {
-    //  @include sectionHeader();
-    font-size: 2rem;
-    font-weight: 400;
     @include tablet {
-      position: relative;
-      left: 15rem;
-      top: 16rem;
-      @include bodyText();
-      font-weight: 100;
+      height: 30rem;
     }
     @include desktop {
-      top: 18rem;
+      height: 35rem;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 1rem;
+    position: relative;
+    left: 12rem;
+    top: 15rem;
+    width: 15rem;
+    @include tablet {
       left: 15rem;
-
-      font-weight: 400;
+      width: 14rem;
       font-size: 1.5rem;
+    }
+    @include desktop {
+      left: 20rem;
+      font-size: 2.4rem;
+      width: 20rem;
     }
   }
   &__bubbles {
-    width: 5rem;
-    height: fit-content;
-
     order: 2;
-    position: absolute;
     float: right;
-    left: 18.2rem;
+    position: relative;
+
     @include tablet {
-      left: 40rem;
+      top: 16rem;
       width: 7rem;
-      top: 15rem;
     }
     @include desktop {
-      left: 68.8rem;
-      top: 18rem;
+      top: 16rem;
       width: 10rem;
-      // transform: rotate(30deg);
     }
   }
 }
