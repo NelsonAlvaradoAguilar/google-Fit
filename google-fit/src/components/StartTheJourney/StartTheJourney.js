@@ -8,7 +8,7 @@ const StartTheJourney = () => {
     <section className="journey">
       <div className="journey__container">
         <img className="journey__bubbles" src={bubbles2}></img>
-        <div className="journey__container">
+        <div className="journey__content">
           <h1 className="journey__title">Start the journey </h1>
           <Link
             to="https://play.google.com/store/apps/details?id=com.google.android.apps.fitness&hl=en_CA&gl=US"

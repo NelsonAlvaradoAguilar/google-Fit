@@ -6,25 +6,21 @@ const Carousel = ({ data }) => {
   const carouselRef = useRef(null);
   const numItems = data.length;
 
-  // Duplicate the images to create a circular carousel
   const carouselData = [...data, ...data];
 
   const scrollToIndex = (index) => {
     if (carouselRef.current) {
       const containerWidth = carouselRef.current.offsetWidth;
-      const itemWidth = containerWidth / 3; // Assuming three images are visible at a time
-      const maxScrollLeft = carouselRef.current.scrollWidth - containerWidth;
-      const scrollLeft = Math.min(index * itemWidth, maxScrollLeft);
+
       carouselRef.current.scrollTo({
-        left: scrollLeft,
+        left: "left",
         behavior: "smooth",
       });
     }
   };
 
   const handleNextSlide = () => {
-    const nextIndex = (currentIndex + 1) % numItems; // Calculate next index based on the updated state
-    setCurrentIndex(nextIndex);
+    const nextIndex = (currentIndex + 1) % numItems;
     scrollToIndex(nextIndex);
   };
 

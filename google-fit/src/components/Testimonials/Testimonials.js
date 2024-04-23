@@ -4,8 +4,6 @@ import { imageData } from "../../data/api";
 
 import "./Testimonials.scss";
 const TestimonialSection = () => {
-  console.log(imageData);
-
   return (
     <section className="testimonies">
       <div className="testimonies__text-container">
