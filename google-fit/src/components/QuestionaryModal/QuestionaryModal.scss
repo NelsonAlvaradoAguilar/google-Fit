@@ -11,6 +11,7 @@
     justify-content: space-between;
   }
   &__exit {
+    cursor: pointer;
     @include tablet {
       background-image: url("../../assets/icons/Sort\ Down.png");
       width: 2rem;
@@ -24,6 +25,7 @@
     }
   }
   &__answer {
+    cursor: pointer;
     @include tablet {
       margin-top: 0%;
       width: 98%;
