@@ -8,14 +8,12 @@ const Carousel = ({ data }) => {
 
   const carouselData = [...data, ...data];
 
-  const scrollToIndex = (index) => {
+  const scrollToIndex = () => {
     if (carouselRef.current) {
       const containerWidth = carouselRef.current.offsetWidth;
-      const itemWidth = containerWidth / 3;
       const maxScrollLeft = carouselRef.current.scrollWidth - containerWidth;
-      const scrollLeft = Math.min(index * itemWidth, maxScrollLeft);
       carouselRef.current.scrollTo({
-        left: scrollLeft,
+        left: "left",
         behavior: "smooth",
       });
     }
