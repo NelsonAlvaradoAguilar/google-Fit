@@ -11,9 +11,11 @@ const Carousel = ({ data }) => {
   const scrollToIndex = (index) => {
     if (carouselRef.current) {
       const containerWidth = carouselRef.current.offsetWidth;
-
+      const itemWidth = containerWidth / 3;
+      const maxScrollLeft = carouselRef.current.scrollWidth - containerWidth;
+      const scrollLeft = Math.min(index * itemWidth, maxScrollLeft);
       carouselRef.current.scrollTo({
-        left: "left",
+        left: scrollLeft,
         behavior: "smooth",
       });
     }
@@ -21,6 +23,7 @@ const Carousel = ({ data }) => {
 
   const handleNextSlide = () => {
     const nextIndex = (currentIndex + 1) % numItems;
+    setCurrentIndex(nextIndex);
     scrollToIndex(nextIndex);
   };
 
