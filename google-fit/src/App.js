@@ -6,9 +6,10 @@ import Main from "./pages/Main/Main";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/google-Fit">
         <Routes>
           {/* Route for Main page */}
+
           <Route path="/" element={<Main />} />
         </Routes>
       </BrowserRouter>
