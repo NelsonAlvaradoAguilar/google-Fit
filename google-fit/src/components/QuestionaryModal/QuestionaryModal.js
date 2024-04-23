@@ -1,12 +1,9 @@
 import React from "react";
 import "./QuestionaryModal.scss";
 
-import { useNavigate } from "react-router-dom";
-
 function QuestionaryModal({ isOpen, answer, closeModal }) {
-  if (isOpen) return null;
   return (
-    <section className="modal">
+    <section className={`modal ${isOpen ? "open" : ""}`}>
       <div onClick={closeModal} className="modal__exit" cursor={"pointer"}>
         {""}
       </div>
