@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/NelsonAlvaradoAguilar/google-Fit/static/css/main.1d738319.css",
-    "main.js": "/NelsonAlvaradoAguilar/google-Fit/static/js/main.d72d4516.js",
+    "main.js": "/NelsonAlvaradoAguilar/google-Fit/static/js/main.7ac9107e.js",
     "static/js/453.47bd20e8.chunk.js": "/NelsonAlvaradoAguilar/google-Fit/static/js/453.47bd20e8.chunk.js",
     "static/media/Pic3.svg": "/NelsonAlvaradoAguilar/google-Fit/static/media/Pic3.38d97cd016d9cf6cea09e2a5fa726758.svg",
     "static/media/Hero-left-enlarged.png": "/NelsonAlvaradoAguilar/google-Fit/static/media/Hero-left-enlarged.7aae73f626e607e0b747.png",
@@ -31,11 +31,11 @@
     "static/media/tw.svg": "/NelsonAlvaradoAguilar/google-Fit/static/media/tw.9ea56991924d8302746575e083e94143.svg",
     "static/media/fb.svg": "/NelsonAlvaradoAguilar/google-Fit/static/media/fb.868cf1311ab1170618ae3687b92ca98f.svg",
     "main.1d738319.css.map": "/NelsonAlvaradoAguilar/google-Fit/static/css/main.1d738319.css.map",
-    "main.d72d4516.js.map": "/NelsonAlvaradoAguilar/google-Fit/static/js/main.d72d4516.js.map",
+    "main.7ac9107e.js.map": "/NelsonAlvaradoAguilar/google-Fit/static/js/main.7ac9107e.js.map",
     "453.47bd20e8.chunk.js.map": "/NelsonAlvaradoAguilar/google-Fit/static/js/453.47bd20e8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1d738319.css",
-    "static/js/main.d72d4516.js"
+    "static/js/main.7ac9107e.js"
   ]
 }
