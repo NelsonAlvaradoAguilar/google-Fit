@@ -36,11 +36,13 @@
     list-style: none;
   }
   &__list-of-question {
+    display: flex;
     list-style: none;
     padding: 0%;
     @include tablet {
       border-top: 1px solid $color-gray;
       margin-bottom: 1rem;
+      justify-content: space-evenly;
     }
     &--border-top {
       @include tablet {
@@ -79,6 +81,7 @@
     &--width {
       @include tablet {
         width: 19rem;
+        flex-direction: column;
       }
     }
   }
@@ -87,8 +90,9 @@
     width: calc(0.95 * 100%);
     &--position {
       @include tablet {
-        margin-bottom: auto;
+        margin-bottom: 70%;
         margin-top: 0%;
+        display: flex;
       }
     }
   }
@@ -99,9 +103,11 @@
     background-repeat: no-repeat;
     cursor: pointer;
     &--down {
+      visibility: hidden;
       transform: rotate(180deg);
       @include tablet {
         visibility: hidden;
+
         width: 0%;
       }
     }
