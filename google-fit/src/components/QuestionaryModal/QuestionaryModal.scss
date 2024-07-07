@@ -10,6 +10,9 @@
     width: 60%;
     justify-content: space-between;
   }
+  @include desktop {
+    font-size: 1.2rem;
+  }
   &__open {
     opacity: 1;
     animation: modalOpen 3s ease-in;
@@ -18,7 +21,6 @@
 
     @include tablet {
       translate: -1.5rem;
-      scale: 1.1;
     }
   }
   &__content {
