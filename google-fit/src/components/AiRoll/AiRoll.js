@@ -7,15 +7,18 @@ const AiRoll = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [questionId, setQuestionId] = useState(null);
   const [answer, setAnswer] = useState(null);
-
-  const handleShowModal = (id, answer) => {
+  const [question, setQuestion] = useState(null);
+  console.log(question);
+  const handleShowModal = (id, answer, question) => {
     setModalIsOpen(true);
     setQuestionId(id);
     setAnswer(answer);
+    setQuestion(question);
   };
   const handleCloseModal = () => {
     setModalIsOpen(false);
     setQuestionId(null);
+    setQuestion(null);
   };
 
   return (
@@ -58,9 +61,6 @@ const AiRoll = () => {
                   }`}
                 >
                   <h1
-                    onClick={() => {
-                      handleCloseModal();
-                    }}
                     className={`Airoll__question ${
                       question.id === questionId
                         ? "Airoll__question--position"
@@ -70,8 +70,15 @@ const AiRoll = () => {
                     {question.question}{" "}
                   </h1>{" "}
                   <div
+                    onDoubleClick={() => {
+                      handleCloseModal();
+                    }}
                     onClick={() => {
-                      handleShowModal(question.id, question.answer);
+                      handleShowModal(
+                        question.id,
+                        question.answer,
+                        question.question
+                      );
                     }}
                     className={`Airoll__arrow ${
                       question.id === questionId ? "Airoll__arrow--down" : ""
@@ -87,6 +94,7 @@ const AiRoll = () => {
                     id={questionId}
                     answer={answer}
                     closeModal={handleCloseModal}
+                    question={questions}
                   />
                 )}
               </div>

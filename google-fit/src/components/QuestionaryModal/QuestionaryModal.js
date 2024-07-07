@@ -1,15 +1,24 @@
 import React from "react";
 import "./QuestionaryModal.scss";
 
-function QuestionaryModal({ isOpen, answer, closeModal }) {
+const QuestionaryModal = ({
+  IsOpen,
+  setModalIsOpen,
+  id,
+  answer,
+  closeModal,
+  question,
+}) => {
+  console.log(question);
   return (
-    <section className={`modal ${isOpen ? "open" : ""}`}>
-      <div onClick={closeModal} className="modal__exit" cursor={"pointer"}>
-        {""}
+    <div className={`modal ${IsOpen ? "modal__open" : ""}`}>
+      <div className={`modal__content${IsOpen ? "modal__content--ease" : ""}`}>
+        <p>{question.id}</p>
+        <p>{answer}</p>
+        <button className="modal__exit" onClick={closeModal}></button>
       </div>
-      <p className="modal__answer">{answer}</p>
-    </section>
+    </div>
   );
-}
+};
 
 export default QuestionaryModal;

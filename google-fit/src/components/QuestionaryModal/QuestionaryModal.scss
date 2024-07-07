@@ -10,18 +10,41 @@
     width: 60%;
     justify-content: space-between;
   }
+  &__open {
+    opacity: 1;
+    animation: modalOpen 3s ease-in;
+    @include modalOpen;
+    scale: 1.1;
+    translate: -1.5rem;
+    @include tablet {
+    }
+  }
+  &__content {
+  }
   &__exit {
     cursor: pointer;
-    @include tablet {
-      background-image: url("../../assets/icons/Sort\ Down.png");
-      width: 2rem;
-      height: 2rem;
-      order: 1;
-      flex-direction: row;
-      background-repeat: no-repeat;
-      margin-bottom: auto;
 
-      transform: rotate(180deg);
+    background-image: url("../../assets/icons/Sort\ Down.png");
+    width: 2rem;
+    height: 2rem;
+    order: 1;
+    flex-direction: row;
+    background-repeat: no-repeat;
+    margin-bottom: auto;
+    visibility: visible;
+    transform: rotate(180deg);
+    border: none;
+    background-color: white;
+    @include tablet {
+      position: relative;
+      top: 1rem;
+      left: 18rem;
+    }
+    @include desktop {
+      position: relative;
+      top: 1rem;
+      left: 39rem;
+      height: 5rem;
     }
   }
   &__answer {
