@@ -14,9 +14,11 @@
     opacity: 1;
     animation: modalOpen 3s ease-in;
     @include modalOpen;
-    scale: 1.1;
-    translate: -1.5rem;
+    scale: 0.9;
+
     @include tablet {
+      translate: -1.5rem;
+      scale: 1.1;
     }
   }
   &__content {
