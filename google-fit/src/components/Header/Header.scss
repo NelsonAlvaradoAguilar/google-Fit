@@ -2,15 +2,15 @@
 @use "../../styles/partials/mixins" as *;
 
 .nav {
-  // padding: 0rem 2.5rem;
+  padding: 0rem 2.5rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  // text-align: center;
+  text-align: center;
   justify-content: space-between;
   align-items: center;
   height: 7rem;
-  width: 100vw;
+
   .logo {
     display: flex;
     flex-direction: column;
