@@ -2,11 +2,12 @@
 @use "../../styles/partials/variables" as *;
 .carousel {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+
+  width: 100%;
   @include tablet {
     flex-direction: row;
-    width: 100%;
+
     margin-left: 3rem;
   }
   &__card {
@@ -16,7 +17,7 @@
     &--img {
       display: flex;
       padding-top: 1rem;
-      width: 100%;
+      width: 6rem;
 
       @include tablet {
         width: 7.2rem;
@@ -33,16 +34,19 @@
   &__slide {
     align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     overflow: hidden;
     padding: 0%;
     scrollbar-width: none;
+    justify-content: space-between;
     margin: 0%;
     width: 100%;
     height: 100%;
+    scale: 0.9;
     @include tablet {
       flex-direction: row;
       align-items: center;
+      scale: 1;
       justify-content: space-between;
     }
   }
@@ -53,27 +57,59 @@
     background-size: cover;
     height: 40px;
     width: 40px;
-    border-style: none;
-    background-color: $color-white;
-    transform: rotate(180deg);
+    border: none;
+    background-color: transparent;
+    position: absolute;
     opacity: 0;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+
     @include tablet {
-      transform: rotate(90deg);
       height: 36px;
       width: 36px;
     }
+
     @include desktop {
-      width: 60px;
+      height: 50px;
+      width: 50px; // Increase size for desktop for better visibility
     }
-    &--down {
-      transform: rotate(360deg);
+
+    &--prev {
+      left: -05px; // Position the previous button to the left
+      top: 50%; // Center vertically
+      transform: translateY(-50%) rotate(90deg); // Rotate and adjust position
+
       @include tablet {
-        transform: rotate(270deg);
+        left: -05px;
+        width: 45px;
+      }
+
+      @include desktop {
+        left: 30px;
+        left: -8px;
+        width: 60px;
       }
     }
-  }
-  &__buttons:hover {
-    opacity: 1;
+
+    &--next {
+      right: -05px;
+      top: 50%;
+      transform: translateY(-50%) rotate(270deg);
+
+      @include tablet {
+        right: -05px;
+        width: 45px;
+      }
+
+      @include desktop {
+        right: -05px;
+        width: 60px;
+        right: -8px;
+      }
+    }
   }
 }
