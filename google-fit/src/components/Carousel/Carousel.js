@@ -10,8 +10,6 @@ const Carousel = ({ data }) => {
 
   const scrollToIndex = () => {
     if (carouselRef.current) {
-      const containerWidth = carouselRef.current.offsetWidth;
-      const maxScrollLeft = carouselRef.current.scrollWidth - containerWidth;
       carouselRef.current.scrollTo({
         left: "left",
         behavior: "smooth",
@@ -26,16 +24,22 @@ const Carousel = ({ data }) => {
   };
 
   const handlePrevSlide = () => {
-    const prevIndex = currentIndex === 0 ? numItems - 1 : currentIndex - 1; // Calculate previous index
+    const prevIndex = currentIndex === 0 ? numItems - 1 : currentIndex - 1;
     setCurrentIndex(prevIndex);
     scrollToIndex(prevIndex);
   };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNextSlide();
+    }, 3000);
 
+    return () => clearInterval(interval);
+  }, [currentIndex]);
   return (
     <div className="carousel" ref={carouselRef}>
       <ul className="carousel__slide">
         <button
-          className="carousel__buttons"
+          className="carousel__buttons carousel__buttons--prev"
           onClick={handlePrevSlide}
         ></button>
         {carouselData.map((image, index) => (
@@ -54,7 +58,7 @@ const Carousel = ({ data }) => {
           </li>
         ))}
         <button
-          className={"carousel__buttons carousel__buttons--down"}
+          className="carousel__buttons carousel__buttons--next"
           onClick={handleNextSlide}
         ></button>
       </ul>
@@ -63,4 +67,3 @@ const Carousel = ({ data }) => {
 };
 
 export default Carousel;
-//
