@@ -41,7 +41,7 @@
       @extend .hero-text;
       text-align: center;
       left: 36%;
-      width: 15rem;
+      width: 14rem;
       top: 22rem;
       &--hide {
         display: none;
@@ -91,7 +91,7 @@
         color: white;
         left: 76%;
         top: 28%;
-        width: 11rem;
+        // width: 11rem;
         text-align: right;
       }
     }

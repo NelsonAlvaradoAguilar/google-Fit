@@ -15,7 +15,7 @@
   }
   &__open {
     opacity: 1;
-    animation: modalOpen 3s ease-in;
+    animation: modalOpen 1s ease-in;
     @include modalOpen;
     scale: 0.9;
 
@@ -23,8 +23,7 @@
       translate: -1.5rem;
     }
   }
-  &__content {
-  }
+
   &__exit {
     cursor: pointer;
 
@@ -39,6 +38,7 @@
     transform: rotate(180deg);
     border: none;
     background-color: white;
+
     @include tablet {
       position: relative;
       top: 1rem;
